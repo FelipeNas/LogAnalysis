@@ -49,19 +49,30 @@ a patter-matching.
 Install Git Bash for Windows.  
 Install Virtual Box 5.1.  
 Install Vagrant.  
-Unzip the database file, and put the content inside the **vagrant** directory.
+Unzip the database file, and put the content inside the **loganalisys** directory.
 
-Change to the *VM config* directory via terminal, inside there is a directory called **vagrant**, change to this directory.  
-Inside the directory **vagrant**, type: `vagrant up`.  
+cd into the **loganalisys** directory  
+Inside the directory **loganalisys**, type: `vagrant up`.  
 Wait until `vagrant up` is finish running.  
 Now type: `vagrant ssh` to log in the VM.
+```
+$ cd /LogAnalisys
+$ vagrant up
+...
+$ vagrant ssh
+```
 
 Logged into the VM cd into the vagrant directory: `cd /vagrant/`  
 Type: `psql	-d news -f newsdata.sql`.  
 Now the database **news** is loaded.
 
+```
+$ cd /vagrant
+$ psql -d news -f newsdata.sql
+```
+
 ## How to use
 
 Logged into the VM  
 Inside the directory /vagrant/,  
-Use `python Log.Analysis.py`
+Use `python log_analysis.py`
